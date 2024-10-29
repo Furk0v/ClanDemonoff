@@ -1,9 +1,10 @@
-*{
+* {
     font-family: Arial, Helvetica, sans-serif;
-    margin:0px;
+    margin: 0px;
     font-size: 20px;
 }
-.up{
+
+.up {
 
     height: 150px;
     width: 100%;
@@ -11,22 +12,69 @@
     justify-content: center;
     align-items: center;
 }
-.avatar{
+
+.avatar {
+    right: 31px;
     position: absolute;
-    right: 30px;
+    z-index: 202;
     height: 50px;
     width: 50px;
     border-radius: 100%;
     background-color: brown;
+    -webkit-transition:
+        width 1s,
+        height 1s,
+        background-color 0.5s,
+        -webkit-transform 2s;
+    transition:
+        width 2s,
+        height 2s,
+        background-color 2s,
+        transform 2s;
 }
 
-.avatar:hover{
+.avatar:hover {
+    width: 60px;
+    height: 60px;
     cursor: pointer;
     background-color: rgb(255, 95, 95);
-
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
 }
 
-.navbar{
+.miniprofile {
+    right: 30px;
+    position: absolute;
+    z-index: 201;
+    top: 50px;
+    max-width: 0;
+    max-height: 0;
+
+    border-radius: 50px;
+    background-color: rgb(237, 44, 44);
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    border: 5px solid black;
+    gap: 10px;
+    padding: 10px;
+    transition:
+        max-height 1s,
+        max-width 1s;
+}
+
+
+.miniprofile-element {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    border-radius: 50px;
+    background-color: #efb624;
+}
+
+.navbar {
+    position: fixed;
+    z-index: 205;
     display: flex;
     height: 50px;
     align-items: center;
@@ -35,7 +83,9 @@
     box-shadow: -5px 5px 20px 3px rgba(0, 0, 0, 0.27)
 }
 
-.navel{
+.navel {
+    color: black;
+    text-decoration: none;
     width: 250px;
     height: 50px;
     border-radius: 50px;
@@ -45,39 +95,83 @@
     background-color: rgb(252, 252, 252);
 
 }
-.navel:hover{
+
+.navel:hover {
     height: 50px;
     background-color: rgb(255, 240, 190);
     cursor: pointer;
-}   
-body{
-    height: 100%;
-    background: linear-gradient(to bottom left, rgb(245, 172, 89), rgb(77, 29, 136))
 }
-.search{
+
+body {
+    height: 100%;
+    background: linear-gradient(to bottom left, rgb(250, 179, 99), rgb(67, 25, 120));
+    animation: gradient 5s infinite linear;
+    background-size: 400%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+@keyframes gradient {
+    0% {
+        background-position: 40% 60%;
+    }
+    50% {
+        background-position: 20% 80%;
+    }
+    100% {
+        background-position: 40% 60%;
+    }
+}
+.search {
     width: 350px;
     font-size: 20px;
     height: 20px;
     margin-left: 20px;
-
     border: 0px;
     outline: none;
+}
+.searchbutton{
+    float: right;
+    height: 45px;
+    width: 100px;
+    border-radius: 50px;
+    background: white;
 
 }
-.mid{
+.searchbutton:hover{
+    cursor: pointer;
+    background: linear-gradient(to left, rgb(245, 172, 89) 10%, rgba(77, 29, 136, 0));
+    animation: background 3s;
+
+}
+.headset{
+    height: 350px;
+    width: 350px;
+    position: absolute;
+    right: 690px;
+    bottom: 5px;
+}
+.mid {
+    position: relative;
     margin-top: -100px;
     margin-bottom: 100px;
     display: flex;
-    gap:30px;
+    gap: 30px;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     height: 708px;
-    width: 100%; 
+    width: 100%;
 }
-.searchblock{
+
+.searchblock {
+    z-index: 200;
     display: flex;
+    gap:46px;
     align-items: center;
+    justify-content: center;
     width: 500px;
     height: 45px;
     border-radius: 50px;
@@ -85,32 +179,43 @@ body{
     box-shadow: -5px 5px 20px 3px rgba(0, 0, 0, 0.27);
 }
 
-.Clan{
+.Clan {
     text-shadow: -5px 5px 20px 3px rgba(0, 0, 0, 0.27);
     color: white;
     font-size: 80px;
 }
-.main{
+
+.main {
     display: flex;
-    gap:20px;
+    gap: 20px;
     flex-direction: row;
     background-color: rgba(61, 26, 94, 0.432);
     border-radius: 50px;
     margin-inline: 30px;
     padding: 20px;
+    max-width: 1500px;
 }
-.posts{
+
+.posts {
     padding: 20px;
     border-radius: 50px;
     display: flex;
-    gap: 20px;
+    gap: 40px;
     flex-direction: column;
     align-items: center;
+    text-align: left;
     width: 65%;
     background-color: rgba(51, 23, 44, 0.397);
 }
 
-.switch{
+.newses{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    right: 0px;
+}
+
+.switch {
     text-align: center;
     align-items: center;
     justify-content: center;
@@ -118,9 +223,10 @@ body{
     height: 35px;
     border-radius: 50px;
     display: flex;
-    background-color: rgb(59, 32, 49);
+    background-color: rgba(45, 25, 43, 0.652);
 }
-.switchbutton{
+
+.switchbutton {
     color: white;
     display: flex;
     text-align: center;
@@ -130,13 +236,15 @@ body{
     height: 35px;
     border-radius: 50px;
 }
-.switchbutton:hover{
+
+.switchbutton:hover {
     height: 35px;
     background-color: rgb(0, 0, 0);
     cursor: pointer;
     border-radius: 50px;
 }
-.pots{
+
+.pots {
     padding: 20px;
     flex-direction: column;
     display: flex;
@@ -147,7 +255,8 @@ body{
     border-radius: 50px;
     gap: 20px;
 }
-.pot{
+
+.pot {
     width: 90%;
     text-align: center;
     padding: 30px;
@@ -157,117 +266,192 @@ body{
     color: white;
     border-radius: 50px;
     background-color: rgb(59, 32, 49);
-
 }
 
-.dlyatrack{
+
+.expandable-block {
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.extra-info {
+    display: none;
+}
+
+.expandable-block.expanded {
+    height: 100px;
+}
+
+.expandable-block.expanded .extra-info {
+    display: block;
+}
+
+.dlyatrack {
     display: flex;
     flex-direction: row;
     border-radius: 50px;
     width: 100%;
-    background-color: black;
 }
 
-.num{
+.num {
     display: flex;
     align-items: center;
     margin-inline: 15px;
 }
 
-.track{
-    border-radius: 50px;
+.track {
     flex-direction: row;
     display: flex;
 }
 
-.cover{
+.cover {
     height: 60px;
     width: 60px;
     border-radius: 100%;
     background-color: brown;
 }
 
-.cover:hover{
+.cover:hover {
     cursor: pointer;
 }
 
-.captions{
+.captions {
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin-inline: 10px;
 }
 
-.trackname{
+.trackname {
     text-align: left;
     display: flex;
 }
 
-.artist{
+.artist {
     text-align: left;
     font-size: 16px;
     display: flex;
 }
 
-.dlyarange{
+.dlyarange {
     margin-top: 20px;
     margin-bottom: 20px;
     width: 90%;
 }
 
-.stolb{
+.stolb {
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: black;
     border-radius: 50px;
+    position: relative;
+    transition: transform 0.3s ease;
 }
 
-.favorite{
+.stolb:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+
+.favorite {
     margin-right: 25px;
     align-items: center;
     display: flex;
 }
 
-.favoriteimg{
+.favoriteimg {
     width: 50px;
     height: 50px;
+    background-color: none;
 }
 
-.favoriteimg:hover{
+.favoriteimg:hover {
     cursor: pointer;
     background-color: white;
+    transition:
+        background-color 0.5s;
 }
 
-.range{
+.range {
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    width: 70%;
-    margin-bottom: 20px;
+    width: 94%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 50px;
 }
 
-.audio{
+.range::-webkit-slider-runnable-track {
+    padding-bottom: 15px;
+    border-radius: 50px;
+    height: 7px;
+    background-color: rgba(245, 177, 30, 0.404);
+
+}
+
+.range::-webkit-slider-thumb {
+    background: #f70b0b98;
+    border-radius: 50px;
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+    -webkit-appearance: none;
+
+}
+
+.range::-webkit-slider-thumb:hover {
+    margin-bottom: 10px;
+    background: #0bdcf7a1;
+    border-radius: 50px;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    -webkit-appearance: none;
+
+}
+
+.range::-moz-range-track {
+    border-radius: 50px;
+    height: 5px;
+    background-color: #efb624;
+}
+
+.audio {
     display: flex;
     justify-content: right;
 }
 
-
-
-
-.news{
+.news {
     padding: 50px;
-    width: 85%;
+    width: 90%;
     gap: 20px;
     display: flex;
     flex-direction: column;
     color: white;
     border-radius: 50px;
-    background-color: rgb(59, 32, 49);
+    background-color: rgba(45, 25, 43, 0.652);
+    
+    position: relative;
+    transition: transform 0.3s ease, background-color 0.2s;
+    background-color: #f458ec1d;
+    backdrop-filter: blur(10px);    
 }
 
-.postimg{
+.news:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    background-color: #fdb56d2f;
+
+}
+
+.postimg {
     align-items: center;
     justify-content: center;
     border-radius: 50px;
@@ -275,13 +459,502 @@ body{
     min-width: 100%;
     max-width: 100%;
 }
-.posttext{
 
+.newstext {
     width: 100%;
+    line-height: 1.5;
 }
-.dlyaswitch{
+
+.dlyaswitch {
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
+}
+
+.dlyanumbers {
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 80%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.numbers {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    margin-bottom: 10px;
+
+}
+
+.marknum {
+    font-weight: bold;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.688);
+    width: 10%;
+}
+
+/* ставьте лайки1
+*/
+
+.dlyasearch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.main2 {
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    background-color: rgba(61, 26, 94, 0.432);
+    border-radius: 50px;
+    margin-inline: 30px;
+    margin-top: 30px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.pot2 {
+    width: 100%;
+    text-align: center;
+    padding: 30px;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    border-radius: 50px;
+    background-color: rgba(51, 23, 44, 0.397);
+}
+
+
+.stolb2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(59, 32, 49);
+    border-radius: 50px;
+}
+
+.leftrightpots {
+    gap: 20px;
+    margin-inline: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 45%;
+}
+
+
+
+
+
+
+
+/* СТАВЬТЕ ЛАЙКИ2 */
+
+
+
+.main3 {
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(61, 26, 94, 0.432);
+    border-radius: 50px;
+    margin-inline: 30px;
+    margin-top: -370px;
+    margin-bottom: 30px;
+    padding: 30px;
+    gap: 30px;
+    max-width: 1500px;
+}
+
+.main3leftright{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-top: 360px;
+}
+
+
+
+.friends {
+    background-color: rgba(51, 23, 44, 0.397);
+    border-radius: 50px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+    gap: 10px;
+    width: 87%;
+}
+
+
+.dlyanamelevel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10px;
+}
+
+
+.buttonletsgosing {
+    align-items: center;
+    display: flex;
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+
+}
+
+.imgbuttonletsgosing {
+    width: 40px;
+    height: 40px;
+    background-color: none;
+    filter: invert(100%);
+}
+
+.buttonletsgosing:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.215);
+    border-radius: 100px;
+
+    transition:
+        background-color 0.5s;
+}
+
+
+.dlyafriendavatarnamelevel {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 70%;
+}
+
+.threedots {
+    align-items: center;
+    display: flex;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+
+}
+
+.imgthreedots {
+    width: 30px;
+    height: 30px;
+    background-color: none;
+    filter: invert(100%);
+}
+
+.threedots:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.215);
+    border-radius: 100px;
+
+    transition:
+        background-color 0.5s;
+}
+
+
+
+
+
+
+
+
+
+
+.bigavatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 500px;
+    width: 500px;
+    border-radius: 100%;
+    background-color: brown;
+
+}
+
+.dlyabigavatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 50px;
+    z-index: 199;
+}
+
+
+.dlyamybigname {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-top: 30px;
+    z-index: 199;
+}
+
+.dlyamybiglevel{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-top: 10px;
+    z-index: 199;
+}
+
+.main3left {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 25%;
+    gap: 30px;
+}
+
+
+
+
+.friend {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    border-radius: 50px;
+    width: 100%;
+    background-color: rgba(45, 25, 43, 0.652);
+}
+
+
+.friendname {
+    text-align: left;
+    display: flex;
+}
+
+
+
+.friendlevel {
+    text-align: left;
+    font-size: 16px;
+    display: flex;
+}
+
+.friendavatarnamelevel {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+}
+
+.imgfriendavatar {
+    height: 60px;
+    width: 60px;
+    border-radius: 100%;
+    background-color: rgb(58, 42, 165);
+}
+
+.imgfriendavatar:hover {
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+.myfavorites {
+    padding: 30px;
+    flex-direction: column;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    width: 87%;
+    background-color: rgba(51, 23, 44, 0.397);
+    border-radius: 50px;
+    gap: 10px;
+}
+
+
+
+
+
+
+
+.mymarksreviews {
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 73.35%;
+    background-color: rgba(51, 23, 44, 0.397);
+    padding: 30px;
+    gap: 30px;
+}
+
+
+.myreviews{
+    background-color: rgba(45, 25, 43, 0.652);
+    border-radius: 50px;
+    width: 95.5%;
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.upmyreviews{
+    display: flex;
+    border-radius: 50px;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    border: 2px solid white;
+    padding: 30px;
+    gap: 20px;
+    height: 85%;
+    width: 150%;
+    position: relative;
+    transition: transform 0.3s ease;
+    z-index: 10;
+    background-color: #befeff06;
+    backdrop-filter: blur(10px);
+}
+
+.upmyreviews:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+    background-color: #befeff06;
+
+}
+
+
+
+.mybigmarkspan{
+    display: flex;
+    font-size: 80px;
+    font-weight: bold;
+    color: rgb(0, 200, 255);
+}
+
+
+
+
+.myreview{
+    display: flex;
+    border-radius: 50px;
+    border: 2px solid white;
+    padding: 30px;
+    flex-direction: column;
+    gap: 20px;
+    height: 85%;
+    justify-content: center;
+    position: relative;
+    transition: transform 0.3s ease;
+    z-index: 10;
+    background-color: #befeff06;
+    backdrop-filter: blur(10px);
+
+
+}
+
+.myreview:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.myreviewspan{
+    color: white;
+    line-height: 1.5;
+}
+
+
+.reactions{
+    display: flex;
+    flex-direction: row;
+}
+
+.like{
+    font-size: 40px;
+}
+
+.like:hover{
+    cursor: pointer;
+    font-size: 60px;
+    transition: font-size 0.3s ease;
+}
+
+
+
+.trackdlyamybigmark{
+    display: flex;
+    flex-direction: row;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.dlyatrackdlyamybigmark{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.coverdlyamybigmark{
+    height: 150px;
+    width: 150px;
+    border-radius: 100%;
+    background-color: brown;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+
+}
+
+
+.captionsdlyamybigmark {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 5px;
+}
+
+.artistdlyamybigmark {
+    text-align: left;
+    font-size: 20px;
+    display: flex;
+}
+
+
+.tracknamedlyamybigmark {
+    text-align: left;
+    display: flex;
+    font-size: 30px;
+}
+
+.nazvaniemetodatakoeshovanyazakachaetsya{
+
 }

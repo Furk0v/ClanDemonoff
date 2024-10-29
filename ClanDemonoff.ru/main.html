@@ -4,6 +4,7 @@
 <head>
     <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
     <link href="MAIN.css" rel="stylesheet" />
+    <script src="./script.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ClanDemonoff.ru</title>
@@ -13,59 +14,70 @@
     <div class="up">
         <div class="logo"></div>
         <div class="navbar">
-            <h1 class="navel">Главная</h1>
-            <h1 class="navel">Поты треков</h1>
-            <h1 class="navel">FA Q</h1>
+            <a class="navel" href="main.html">Главная</a>
+            <a class="navel" href="pots.html">Поты треков</a>
+            <a class="navel">FA Q</a>
         </div>
-        <div class="avatar">
-            <img src="/images/profile-circle-svgrepo-com.svg" alt="" style="width: 50px; height: 50px;">
+
+        <a class="avatar" href="profile.html">
+            <img src="images/profile-circle-svgrepo-com.svg" alt="" style="width: 50px; height: 50px;">
+        </a>
+
+        <div class="miniprofile">
+            <div class="miniprofile-element">fewfe</div>
+            <div class="miniprofile-element">fewfe</div>
+
         </div>
+
+
     </div>
     <div class="mid">
         <div class="Clan">
             Clan
         </div>
+        <img src="images/FRONT.png" alt="" class="headset" style="z-index: 201;"> 
         <div class="searchblock">
+            
             <input class="search" type="text" name="" id="" placeholder="Поиск треков">
-            <!-- <button class="searchbutton">
-                <img class="searchimg" src="images/microphone-2-svgrepo-com.svg" alt="">
-            </button> -->
+            <div class="searchbutton"></div>
         </div>
+        <img src="images/headsetFULL.png" alt="" class="headset" style="z-index: 199;">
     </div>
     <div class="main">
         <div class="posts">
-            <div class="dlyaswitch">
-                <div class="switch">
-                    <div class="switchbutton">Новости</div>
-                    <div class="switchbutton">Рецензии</div>
+            <div class="switch">
+                <div class="switchbutton">Новости</div>
+                <div class="switchbutton">Рецензии</div>
+            </div>
+            <div class="newses">
+                <div class="news">
+                    <h1>Заголовок</h1>
+                    <span class="newstext">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam quibusdam sit
+                        est fugiat,
+                        recusandae, veniam fugit explicabo quasi doloremque nemo deserunt laborum quaerat nam voluptate!
+                        Placeat autem aliquam necessitatibus iusto.</span>
+                    <img class="postimg" src="images/v74_79.png" alt="">
+                </div>
+                <div class="news">
+                    <h1>Заголовок</h1>
+                    <span class="newstext">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam quibusdam sit
+                        est fugiat,
+                        recusandae, veniam fugit explicabo quasi doloremque nemo deserunt laborum quaerat nam voluptate!
+                        Placeat autem aliquam necessitatibus iusto.</span>
+                    <img class="postimg" src="images/v74_79.png" alt="">
                 </div>
             </div>
-            <div class="news">
-                <h1>Заголовок</h1>
-                <span class="posttext">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam quibusdam sit
-                    est fugiat,
-                    recusandae, veniam fugit explicabo quasi doloremque nemo deserunt laborum quaerat nam voluptate!
-                    Placeat autem aliquam necessitatibus iusto.</span>
-                <img class="postimg" src="images/v74_79.png" alt="">
-            </div>
-            <div class="news">
-                <h1>Заголовок</h1>
-                <span class="posttext">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam quibusdam sit
-                    est fugiat,
-                    recusandae, veniam fugit explicabo quasi doloremque nemo deserunt laborum quaerat nam voluptate!
-                    Placeat autem aliquam necessitatibus iusto.</span>
-                <img class="postimg" src="images/v74_79.png" alt="">
-            </div>
+            
         </div>
         <div class="pots">
             <div class="pot">
                 <h1>Пот новинок</h1>
-                <div class="stolb">
+                <div class="stolb expandable-block">
                     <div class="dlyatrack">
                         <span class="num">1</span>
                         <div class="dlyarange">
                             <div class="track">
-                                <img class="cover" src=""></img>
+                                <img class="cover" src="images/Снимок экрана 2024-10-23 154158.png"></img>
                                 <div class="captions">
                                     <span class="trackname">Heavy metall 2</span>
                                     <span class="artist">Viperr</span>
@@ -76,47 +88,64 @@
                             <img class="favoriteimg" src="images/v106_10.png" alt="">
                         </div>
                     </div>
-                    <input class="range" type='range'>
-                </div>
-                <div class="dlyatrack">
-                    <span class="num">2</span>
-                    <div class="dlyarange">
-                        <div class="track">
-                            <img class="cover" src=""></img>
-                            <div class="captions">
-                                <span class="trackname">Heavy metall 2</span>
-                                <span class="artist">Viperr</span>
-                            </div>
+                    <div class="dlyanumbers">
+                        <input class="range" type='range' step="1" min="1" max="10">
+                        <div class="numbers">
+                            <span class="marknum">1</span>
+                            <span class="marknum">2</span>
+                            <span class="marknum">3</span>
+                            <span class="marknum">4</span>
+                            <span class="marknum">5</span>
+                            <span class="marknum">6</span>
+                            <span class="marknum">7</span>
+                            <span class="marknum">8</span>
+                            <span class="marknum">9</span>
+                            <span class="marknum">0</span>
                         </div>
                     </div>
-                    <div class="favorite">
-                        <img class="favoriteimg" src="images/v106_10.png" alt="">
-                    </div>
                 </div>
-                <div class="dlyatrack">
-                    <span class="num">3</span>
-                    <div class="dlyarange">
-                        <div class="track">
-                            <img class="cover" src=""></img>
-                            <div class="captions">
-                                <span class="trackname">Heavy metall 2</span>
-                                <span class="artist">Viperr</span>
+                <div class="stolb expandable-block">
+                    <div class="dlyatrack">
+                        <span class="num">1</span>
+                        <div class="dlyarange">
+                            <div class="track">
+                                <img class="cover" src="images/Снимок экрана 2024-10-23 154158.png"></img>
+                                <div class="captions">
+                                    <span class="trackname">Heavy metall 2</span>
+                                    <span class="artist">Viperr</span>
+                                </div>
                             </div>
                         </div>
+                        <div class="favorite">
+                            <img class="favoriteimg" src="images/v106_10.png" alt="">
+                        </div>
                     </div>
-                    <div class="favorite">
-                        <img class="favoriteimg" src="images/v106_10.png" alt="">
+                    <div class="dlyanumbers">
+                        <input class="range" type='range' step="1" min="1" max="10">
+                        <div class="numbers">
+                            <span class="marknum">1</span>
+                            <span class="marknum">2</span>
+                            <span class="marknum">3</span>
+                            <span class="marknum">4</span>
+                            <span class="marknum">5</span>
+                            <span class="marknum">6</span>
+                            <span class="marknum">7</span>
+                            <span class="marknum">8</span>
+                            <span class="marknum">9</span>
+                            <span class="marknum">0</span>
+                        </div>
                     </div>
                 </div>
+
             </div>
             <div class="pot">
                 <h1>Пот худших</h1>
-                <div class="stolb">
+                <div class="stolb expandable-block">
                     <div class="dlyatrack">
                         <span class="num">1</span>
                         <div class="dlyarange">
                             <div class="track">
-                                <img class="cover" src=""></img>
+                                <img class="cover" src="images/Снимок экрана 2024-10-23 154158.png"></img>
                                 <div class="captions">
                                     <span class="trackname">Heavy metall 2</span>
                                     <span class="artist">Viperr</span>
@@ -127,41 +156,26 @@
                             <img class="favoriteimg" src="images/v106_10.png" alt="">
                         </div>
                     </div>
-                    <input class="range" type='range'>
-                </div>
-                <div class="dlyatrack">
-                    <span class="num">2</span>
-                    <div class="dlyarange">
-                        <div class="track">
-                            <img class="cover" src=""></img>
-                            <div class="captions">
-                                <span class="trackname">Heavy metall 2</span>
-                                <span class="artist">Viperr</span>
-                            </div>
+                    <div class="dlyanumbers">
+                        <input class="range" type='range' step="1" min="1" max="10">
+                        <div class="numbers">
+                            <span class="marknum">1</span>
+                            <span class="marknum">2</span>
+                            <span class="marknum">3</span>
+                            <span class="marknum">4</span>
+                            <span class="marknum">5</span>
+                            <span class="marknum">6</span>
+                            <span class="marknum">7</span>
+                            <span class="marknum">8</span>
+                            <span class="marknum">9</span>
+                            <span class="marknum">0</span>
                         </div>
-                    </div>
-                    <div class="favorite">
-                        <img class="favoriteimg" src="images/v106_10.png" alt="">
-                    </div>
-                </div>
-                <div class="dlyatrack">
-                    <span class="num">3</span>
-                    <div class="dlyarange">
-                        <div class="track">
-                            <img class="cover" src=""></img>
-                            <div class="captions">
-                                <span class="trackname">Heavy metall 2</span>
-                                <span class="artist">Viperr</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="favorite">
-                        <img class="favoriteimg" src="images/v106_10.png" alt="">
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 
 </html>
